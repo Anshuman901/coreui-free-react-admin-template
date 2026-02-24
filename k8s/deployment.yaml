@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: anshutruemeds/react-app:1   # latest successful build tag
+        image: anshutruemeds/react-app:5   # latest successful build tag
         ports:
         - containerPort: 80
+
