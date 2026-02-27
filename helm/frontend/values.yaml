@@ -4,7 +4,11 @@ image:
   repository: anshutruemeds/react-app
   tag: "18"
   pullPolicy: Always
-
+  
+ingress:
+  enabled: true
+  host: coreui.local
+  
 service:
   type: NodePort
   port: 80
