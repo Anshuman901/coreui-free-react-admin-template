@@ -1,18 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: react-app
+  name: coreui-frontend
   namespace: argocd
 spec:
   project: default
+
   source:
     repoURL: https://github.com/Anshuman901/coreui-free-react-admin-template.git
     targetRevision: main
-    path: k8s
+    path: helm/frontend
+    helm:
+      valueFiles:
+        - values.yaml
+
   destination:
     server: https://kubernetes.default.svc
     namespace: default
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
