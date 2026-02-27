@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: anshutruemeds/react-app
-  tag: "latest"
+  tag: "17"
   pullPolicy: Always
 
 service:
