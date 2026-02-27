@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: anshutruemeds/react-app
-  tag: "18"
+  tag: "20"
   pullPolicy: Always
   
 ingress:
